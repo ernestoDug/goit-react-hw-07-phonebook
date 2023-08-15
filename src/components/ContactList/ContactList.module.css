@@ -1,0 +1,61 @@
+.listCont {
+  list-style: none;
+ 
+  box-shadow: 0 0 0 1px #a27b62;
+color: #151414;
+  border-radius: 20px/60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.listContItem {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 15px;
+  padding-right: 5px;
+
+
+  
+  border-radius: 20px/60px;
+  transition: all 0.3s ease-out;
+ 
+  text-decoration: none;
+ 
+  margin-top: 17px;
+  font-size: 17px;
+  &:hover {
+    background: linear-gradient(to bottom, #3e90ab 0%, #228222 100%);
+  }
+}
+
+.listContDell {
+  background-color: #deb8a0;
+
+ 
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 20px/60px;
+  margin-left: 20px;
+  margin-right: 0;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background: #e49312;
+  }
+}
+
+.listContDellX {
+  color: #151414;
+}
+.listContDell:hover > .listContDellX {
+  color: #670c0cfd;
+}
+
+.miniWrapp
+{
+ 
+  font-weight: 600;
+font-size: 20px;
+}
