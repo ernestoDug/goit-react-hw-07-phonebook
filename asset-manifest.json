@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ernestoDug.github.io/goit-react-hw-07-phonebook/static/css/main.43adcbc1.css",
+    "main.js": "/ernestoDug.github.io/goit-react-hw-07-phonebook/static/js/main.f7ef64d1.js",
+    "index.html": "/ernestoDug.github.io/goit-react-hw-07-phonebook/index.html",
+    "main.43adcbc1.css.map": "/ernestoDug.github.io/goit-react-hw-07-phonebook/static/css/main.43adcbc1.css.map",
+    "main.f7ef64d1.js.map": "/ernestoDug.github.io/goit-react-hw-07-phonebook/static/js/main.f7ef64d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43adcbc1.css",
+    "static/js/main.f7ef64d1.js"
+  ]
+}
