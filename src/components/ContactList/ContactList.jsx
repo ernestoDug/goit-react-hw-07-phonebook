@@ -2,14 +2,14 @@
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import css from './ContactList.module.css';
 
-import { getContacts, getContactsFilter } from 'redux/selectors';
+import { selectContacts, selectContactsFilter } from 'redux/selectors';
 import ContactItem from './ContactItem';
 
 const ContactList = () => {
   // дай контакти
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   // дай фільтр
-  const filterCon = useSelector(getContactsFilter);
+  const filterCon = useSelector(selectContactsFilter);
   // відфільтрував
   const filtrat = [
     ...contacts.filter(contact =>

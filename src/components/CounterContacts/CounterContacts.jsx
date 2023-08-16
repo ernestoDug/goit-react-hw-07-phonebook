@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux/es/hooks/useSelector';
-import { getContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
 import css from './CounterContacts.module.css';
 
 const CounterContacts = () => {
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
 
   return (
     <p className={css.counter}>

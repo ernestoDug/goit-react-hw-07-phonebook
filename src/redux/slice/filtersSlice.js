@@ -12,5 +12,4 @@ const filtersSlice = createSlice({
   },
 });
 
-export const { filterContactsAct } = filtersSlice.actions;
-export const filtersReducer = filtersSlice.reducer;
+export const filtersReduser = filtersSlice.reducer

@@ -1,5 +1,5 @@
 // import PropTypes from 'prop-types';
-import { getContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
@@ -7,12 +7,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import css from './ContactForm.module.css';
 
 import ButtonSbmt from 'components/ButtonSbmt/ButtonSbmt';
-import { addContactsAct } from 'redux/slice/contactsSlice';
-import CounterContacts from 'components/CounterComtacts/CounterContacts';
+import { contactsReducer } from 'redux/slice/contactsSlice';
+import CounterContacts from 'components/CounterContacts/CounterContacts';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-  const сontacts = useSelector(getContacts);
+  const сontacts = useSelector(selectContacts);
 
   // відправник
   const submiter = event => {
@@ -24,7 +24,7 @@ const ContactForm = () => {
     if (сontacts.some(({ name }) => name === formName)) {
       return toast.warn(`👻 Уважніше,  ${formName}  вже Є в конТАКтах 👻`);
     }
-    dispatch(addContactsAct(formName, formNumber));
+    dispatch(contactsReducer(formName, formNumber));
     //  очистка
     form.reset();
     //  console.log(form.elements.name.value, form.elements.number.value)
