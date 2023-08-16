@@ -30,7 +30,7 @@ const ContactForm = () => {
     //  console.log(form.elements.name.value, form.elements.number.value)
   };
   return (
-    <>
+    <> 
       <ToastContainer
         position="top-center"
         autoClose={2000}
