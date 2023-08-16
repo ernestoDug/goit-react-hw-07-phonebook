@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import css from './ContactItem.module.css';
 
-import { contactsReducer } from 'redux/slice/contactsSlice';
+import { deleteContact } from 'redux/operations';
 
 const ContactItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
   const deliter = id => {
-    dispatch(contactsReducer(id));
+    dispatch(deleteContact(id));
     // console.log(id);
   };
 

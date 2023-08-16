@@ -1,4 +1,4 @@
-import { createSlice, nanoid } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { fetchContacts, addContact, deleteContact } from 'redux/operations';
 
 
@@ -14,7 +14,7 @@ const contactsInitialState = {
   error: null,
 };
 // очикування
-const pendinger = state => {
+const pendinger = (state) => {
   state.isLoading = true;
 };
 // обломщик
@@ -25,64 +25,35 @@ const rejecter = (state, action) => {
 
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: 
-      {
-        contactsInitialState
-      },
+  initialState: contactsInitialState,
       extraReducers: {
         [fetchContacts.pending]: pendinger,
         [fetchContacts.fulfilled](state, action) {
           state.isLoading = false;
           state.error = null;
-          state.items = action.payload;
-        },
+          state.items = action.payload},
         [fetchContacts.rejected]: rejecter,
-        [fetchContacts.pending]: pendinger,
+
+        [addContact.pending]: pendinger,
         [addContact.fulfilled](state, action) {
           state.isLoading = false;
           state.error = null;
-          return [...state, action.payload];
+          // return [...state.items, action.payload];
+          state.items.push(action.payload);
         },
-        // prepare(name, number) {
-        //           return {
-        //             payload: {
-        //               name,
-        //               number,
-        //               id: nanoid(),
-        //             },
-        [addContact.rejected]: rejecter,
+[addContact.rejected]: rejecter,
+
         [deleteContact.pending]: pendinger,
         [deleteContact.fulfilled](state, action) {
           state.isLoading = false;
           state.error = null;
-return  state.items.filter(contact => contact.id !== action.payload);;
+          const index = state.items.findIndex(
+            contact => contact.id === action.payload.id
+          );
+          state.items.splice(index, 1);
         },
         [deleteContact.rejected]: rejecter,
-              },
+      }
     });
-
-//   reducers: {
-//     // додаватор
-//     addContactsAct: {
-//       reducer(state, action) {
-//         return [...state, action.payload];
-//       },
-//       prepare(name, number) {
-//         return {
-//           payload: {
-//             name,
-//             number,
-//             id: nanoid(),
-//           },
-//         };
-//       },
-//     },
-//     // видалятор
-//     deleteContactsAct(state, { payload }) {
-//       return state.filter(contact => contact.id !== payload);
-//     },
-//   },
-// });
-// // console.log(contactsSlice.actions);
 
 export const  contactsReducer = contactsSlice.reducer

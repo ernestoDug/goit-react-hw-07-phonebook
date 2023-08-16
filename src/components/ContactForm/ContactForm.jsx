@@ -5,9 +5,8 @@ import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import css from './ContactForm.module.css';
-
+import { addContact } from 'redux/operations';
 import ButtonSbmt from 'components/ButtonSbmt/ButtonSbmt';
-import { contactsReducer } from 'redux/slice/contactsSlice';
 import CounterContacts from 'components/CounterContacts/CounterContacts';
 
 const ContactForm = () => {
@@ -24,7 +23,7 @@ const ContactForm = () => {
     if (сontacts.some(({ name }) => name === formName)) {
       return toast.warn(`👻 Уважніше,  ${formName}  вже Є в конТАКтах 👻`);
     }
-    dispatch(contactsReducer(formName, formNumber));
+    dispatch(addContact({name: formName, number: formNumber}));
     //  очистка
     form.reset();
     //  console.log(form.elements.name.value, form.elements.number.value)
