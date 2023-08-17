@@ -1,5 +1,5 @@
 // import PropTypes from 'prop-types';
-import { selectContacts, selectIsLoading } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
