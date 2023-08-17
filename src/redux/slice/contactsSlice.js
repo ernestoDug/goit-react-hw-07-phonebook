@@ -16,7 +16,7 @@ const operationsArray = [fetchContacts, addContact, deleteContact];
 // сортировка
 const operationType = type => operationsArray.map(operand => operand[type]);
 
-const contactsInitialState = {
+export const contactsInitialState = {
   items: [
     { id: 'id-4', name: 'John Lennon', number: '09-10-19-40' },
     { id: 'id-3', name: 'Paul McCartney', number: '18-07-19-42' },
@@ -30,7 +30,7 @@ const contactsInitialState = {
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: contactsInitialState,
-  extraReducers: builder => {
+  extraReducers: (builder) => {
     const { PENDING, FULLFILLED, REJECTED } = STATUS;
 
     builder

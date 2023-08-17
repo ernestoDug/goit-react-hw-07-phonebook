@@ -19,19 +19,17 @@ const ContactList = () => {
   // console.log(filtrat);
   // console.log(contacts, 'contacts');
   return (
-    <div className={css.miniWrapp}>
-      <ul className={css.listCont}>
-        <h3>Контакти</h3>
-        {filterCon
-          ? filtrat.map(({ id, name, number }) => (
-              <ContactItem id={id} key={id} name={name} number={number} />
-            ))
-          : contacts.map(({ id, name, number }) => (
-              <ContactItem id={id} key={id} name={name} number={number} />
-            ))}
-      </ul>
-    </div>
-  );
+       <ul className={css.listCont}>
+      <h3>Контакти</h3>
+      {filterCon
+        ? filtrat.map(({ id, name, number }) => (
+            <ContactItem id={id} key={id} name={name} number={number} />
+          ))
+        : contacts.map(({ id, name, number }) => (
+            <ContactItem id={id} key={id} name={name} number={number} />
+          ))}
+    </ul>
+   );
 };
 // протайпи
 // ContactList.propTypes = {

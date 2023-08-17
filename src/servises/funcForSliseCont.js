@@ -1,9 +1,11 @@
+
 const STATUS = {
     PENDING: 'pending',
     FULLFILLED: 'fulfilled',
     REJECTED: 'rejected',
   };
   
+
   // очикувач
   const pendinger = state => {
     state.isLoading = true;
@@ -16,8 +18,8 @@ const STATUS = {
   
   // виконавець вантажник
   const fulfilder = (state, { payload }) => {
-    state.items = payload;
-    console.log(payload);
+    state.items =  payload;
+    // console.log(payload);
   };
   // виконавець додавач
   const fulfilderAdder = (state, { payload }) => {

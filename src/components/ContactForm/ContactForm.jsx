@@ -12,7 +12,6 @@ import CounterContacts from 'components/CounterContacts/CounterContacts';
 const ContactForm = () => {
   const dispatch = useDispatch();
   const сontacts = useSelector(selectContacts);
-  const losding = useSelector(selectIsLoading)
 
   // відправник
   const submiter = event => {
@@ -42,9 +41,9 @@ const ContactForm = () => {
         draggable
         pauseOnHover
         theme="colored"
-      />
-   { losding === true && (<p className='loading'>🚧Завантажую 🚚...</p>)  } 
-      <div className={css.phoneBookWrapp}>
+        />
+       
+
         <CounterContacts />
         <div className={css.forms}>
           <h3>Телефонна книга</h3>
@@ -88,8 +87,7 @@ const ContactForm = () => {
           src="https://png.pngtree.com/thumb_back/fw800/background/20220523/pngtree-hippie-bus-with-peace-and-love-label-and-flowers-image_1393563.jpg"
           alt="bus"
         />
-      </div>
-    </>
+       </>
   );
 };
 
