@@ -1,5 +1,5 @@
 // import PropTypes from 'prop-types';
-import { selectContacts } from 'redux/selectors';
+import { selectContacts, selectIsLoading } from 'redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
@@ -12,6 +12,7 @@ import CounterContacts from 'components/CounterContacts/CounterContacts';
 const ContactForm = () => {
   const dispatch = useDispatch();
   const сontacts = useSelector(selectContacts);
+  const losding = useSelector(selectIsLoading)
 
   // відправник
   const submiter = event => {
@@ -42,6 +43,7 @@ const ContactForm = () => {
         pauseOnHover
         theme="colored"
       />
+   { losding === true && (<p className='loading'>🚧Завантажую 🚚...</p>)  } 
       <div className={css.phoneBookWrapp}>
         <CounterContacts />
         <div className={css.forms}>
