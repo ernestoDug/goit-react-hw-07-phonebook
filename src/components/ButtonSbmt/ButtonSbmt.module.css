@@ -15,8 +15,17 @@
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 2000ms;
 
   &:hover {
-    background: linear-gradient(to bottom, #33ccff 0%, #33cc33 100%);
+    background-image: linear-gradient(
+      to left,
+      #a3e601,
+      #4fe468,
+      #00db9f,
+      #00cec4,
+      #00bed1
+    );
+    -webkit-animation: vibrate-1 0.3s linear infinite both;
+    animation: vibrate-1 0.3s linear infinite both;
     color: #1c1009;
-    transform: scaleX(1.5);
+    transform: scaleY(1.2);
   }
 }

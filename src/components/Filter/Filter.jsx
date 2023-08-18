@@ -1,7 +1,6 @@
 // import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import css from './Filter.module.css';
-
 import { filterContactsAct } from 'redux/slice/filtersSlice';
 import { selectContactsFilter } from 'redux/selectors';
 
@@ -17,13 +16,13 @@ export const Filter = () => {
 
   return (
     <div className={css.miniWrapp}>
-      <h4>ЗНАЙдіть конТАКт за ім'ям</h4>
+      <h4>Почніть пошук контакта⬇️</h4>
       <input
         name="filter"
         className={css.filter}
         type="text"
         onChange={filterChanger}
-        placeholder="Введіть ім'я контакту"
+        placeholder="Введіть ім'я контакту🗽"
         title="Ім'я може містити лише літери, апостроф, тире та пробіли. Наприклад Адріан, Джейкоб Мерсер, Шарль де Бац де Кастельмор д'Артаньян"
         value={filter}
       />

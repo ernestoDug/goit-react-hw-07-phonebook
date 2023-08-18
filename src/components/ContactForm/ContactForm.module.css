@@ -33,7 +33,6 @@ body {
   transform: rotate(-25deg);
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 2000ms;
   margin-left: 55px;
-  background-image: url(bus.jpg);
   background-size: 200px;
 }
 .imgBus:hover {

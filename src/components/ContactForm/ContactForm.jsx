@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import css from './ContactForm.module.css';
 import { addContact } from 'redux/operations';
 import ButtonSbmt from 'components/ButtonSbmt/ButtonSbmt';
 import CounterContacts from 'components/CounterContacts/CounterContacts';
+import css from './ContactForm.module.css';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -17,11 +17,11 @@ const ContactForm = () => {
   const submiter = event => {
     event.preventDefault();
     const form = event.target;
-    const formName = event.target.elements.name.value;
-    const formNumber = event.target.elements.number.value;
+    const formName = form.elements.name.value;
+    const formNumber = form.elements.number.value;
     //  заборона
     if (сontacts.some(({ name }) => name === formName)) {
-      return toast.warn(`👻 Уважніше,  ${formName}  вже Є в конТАКтах 👻`);
+      return toast.warn(`🥁 Уважніше,  ${formName}  вже Є в конТАКтах 🥁`);
     }
     dispatch(addContact({ name: formName, number: formNumber }));
     //  очистка
@@ -45,10 +45,10 @@ const ContactForm = () => {
 
       <CounterContacts />
       <div className={css.forms}>
-        <h3>Телефонна книга</h3>
+        <h3>☎ книга</h3>
         <form onSubmit={submiter} className={css.formsWr}>
           <label className={css.label}>
-            Ім'я
+            Ім'я 📌
             <input
               className={css.input}
               value={сontacts.name}
@@ -63,7 +63,7 @@ const ContactForm = () => {
           </label>
 
           <label className={css.label}>
-            Номер телефону
+            Номер 📞
             <input
               className={css.input}
               type="tel"

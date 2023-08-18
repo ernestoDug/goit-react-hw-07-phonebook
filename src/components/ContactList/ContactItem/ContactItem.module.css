@@ -3,11 +3,11 @@
   padding: 8px 15px;
   padding-right: 5px;
   background: linear-gradient(to bottom, #33ccff 0%, #33cc33 100%);
- 
+
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 20px/60px;
   transition: all 0.3s ease-out;
-   /* Font styles */
+  /* Font styles */
   text-decoration: none;
   text-shadow: 0 1px rgba(255, 255, 255, 0.7);
   margin-top: 3px;
@@ -18,27 +18,15 @@
 }
 
 .listContDell {
-  background-color: #ce47be;
-
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0)
-  );
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: none;
+  font-size: 25px;
   border-radius: 20px/60px;
   margin-left: 20px;
   margin-right: 0;
   transition: all 0.3s ease-out;
+  background-color: transparent;
 
   &:hover {
-    background: #13c646;
+    background: #ea910b;
   }
-}
-
-.listContDellX {
-  color: #5c22bf;
-  color: white;
-}
-.listContDell:hover > .listContDellX {
-  color: #670c0cfd;
 }

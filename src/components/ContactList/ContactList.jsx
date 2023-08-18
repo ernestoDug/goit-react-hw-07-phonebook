@@ -1,7 +1,6 @@
 // import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import css from './ContactList.module.css';
-
 import { selectContacts, selectContactsFilter } from 'redux/selectors';
 import ContactItem from './ContactItem';
 
@@ -20,7 +19,7 @@ const ContactList = () => {
   // console.log(contacts, 'contacts');
   return (
     <ul className={css.listCont}>
-      <h3>Контакти</h3>
+      <h3 className={css.contTitle}>Контакти 📥</h3>
       {filterCon
         ? filtrat.map(({ id, name, number }) => (
             <ContactItem id={id} key={id} name={name} number={number} />

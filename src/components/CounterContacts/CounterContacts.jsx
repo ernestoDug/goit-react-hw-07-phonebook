@@ -9,8 +9,8 @@ const CounterContacts = () => {
 
   return (
     <>
-      <p className={css.counter}>Контактів в книзі: {contacts.length} </p>
-      {loading === true && <p className="loading">🚧Завантажую 🚚...</p>}
+      <p className={css.counter}> 📝Контактів в книзі: {contacts.length} </p>
+      {loading === true && <p className="loading">🚧Завантажую🚚...</p>}
     </>
   );
 };
