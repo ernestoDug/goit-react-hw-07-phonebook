@@ -47,9 +47,10 @@ const ContactForm = () => {
       <div className={css.forms}>
         <h3>Телефонна книга</h3>
         <form onSubmit={submiter} className={css.formsWr}>
-          <label className={css.label}>
+          <label for="name" className={css.label}>
             Ім'я
             <input
+              id="name"
               className={css.input}
               value={сontacts.name}
               // pattern= "^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -62,9 +63,10 @@ const ContactForm = () => {
             />
           </label>
 
-          <label className={css.label}>
+          <label for="tel" className={css.label}>
             Номер телефону
             <input
+              id="tel"
               className={css.input}
               type="tel"
               placeholder="Введіть номер телефону"
@@ -79,7 +81,7 @@ const ContactForm = () => {
           <ButtonSbmt />
         </form>
       </div>
-           <img
+      <img
         className={css.imgBus}
         width="200"
         height={200}

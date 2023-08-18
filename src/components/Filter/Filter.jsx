@@ -18,15 +18,18 @@ export const Filter = () => {
   return (
     <div className={css.miniWrapp}>
       <h4>ЗНАЙдіть конТАКт за ім'ям</h4>
-      <input
-        name="filter"
-        className={css.filter}
-        type="text"
-        onChange={filterChanger}
-        placeholder="Введіть ім'я контакту"
-        title="Ім'я може містити лише літери, апостроф, тире та пробіли. Наприклад Адріан, Джейкоб Мерсер, Шарль де Бац де Кастельмор д'Артаньян"
-        value={filter}
-      />
+      <label for="filter">
+        <input
+          id="filter"
+          name="filter"
+          className={css.filter}
+          type="text"
+          onChange={filterChanger}
+          placeholder="Введіть ім'я контакту"
+          title="Ім'я може містити лише літери, апостроф, тире та пробіли. Наприклад Адріан, Джейкоб Мерсер, Шарль де Бац де Кастельмор д'Артаньян"
+          value={filter}
+        />
+      </label>
     </div>
   );
 };
