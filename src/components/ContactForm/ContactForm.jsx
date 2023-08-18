@@ -65,7 +65,6 @@ const ContactForm = () => {
           <label className={css.label}>
             Номер телефону
             <input
-            
               className={css.input}
               type="tel"
               placeholder="Введіть номер телефону"
@@ -80,11 +79,11 @@ const ContactForm = () => {
           <ButtonSbmt />
         </form>
       </div>
-           <img
+      <img
         className={css.imgBus}
         width="200"
         height={200}
-        src="bus.jpg"
+        src="https://png.pngtree.com/thumb_back/fw800/background/20220523/pngtree-hippie-bus-with-peace-and-love-label-and-flowers-image_1393563.jpg"
         alt="bus"
       />
     </>

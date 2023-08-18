@@ -19,7 +19,7 @@ const ContactList = () => {
   // console.log(filtrat);
   // console.log(contacts, 'contacts');
   return (
-       <ul className={css.listCont}>
+    <ul className={css.listCont}>
       <h3>Контакти</h3>
       {filterCon
         ? filtrat.map(({ id, name, number }) => (
@@ -29,7 +29,7 @@ const ContactList = () => {
             <ContactItem id={id} key={id} name={name} number={number} />
           ))}
     </ul>
-   );
+  );
 };
 // протайпи
 // ContactList.propTypes = {
