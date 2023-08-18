@@ -23,13 +23,13 @@ const ContactForm = () => {
     if (сontacts.some(({ name }) => name === formName)) {
       return toast.warn(`👻 Уважніше,  ${formName}  вже Є в конТАКтах 👻`);
     }
-    dispatch(addContact({name: formName, number: formNumber}));
+    dispatch(addContact({ name: formName, number: formNumber }));
     //  очистка
     form.reset();
     //  console.log(form.elements.name.value, form.elements.number.value)
   };
   return (
-    <> 
+    <>
       <ToastContainer
         position="top-center"
         autoClose={2000}
@@ -41,53 +41,52 @@ const ContactForm = () => {
         draggable
         pauseOnHover
         theme="colored"
-        />
-       
+      />
 
-        <CounterContacts />
-        <div className={css.forms}>
-          <h3>Телефонна книга</h3>
-          <form onSubmit={submiter} className={css.formsWr}>
-            <label className={css.label}>
-              Ім'я
-              <input
-                className={css.input}
-                value={сontacts.name}
-                // pattern= "^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-                //  так чомусь помилка в консолі
-                type="text"
-                placeholder="Введіть ім'я"
-                title="Ім'я може містити лише літери, апостроф, тире та пробіли. Наприклад Адріан, Джейкоб Мерсер, Шарль де Бац де Кастельмор д'Артаньян"
-                name="name"
-                required
-              />
-            </label>
+      <CounterContacts />
+      <div className={css.forms}>
+        <h3>Телефонна книга</h3>
+        <form onSubmit={submiter} className={css.formsWr}>
+          <label className={css.label}>
+            Ім'я
+            <input
+              className={css.input}
+              value={сontacts.name}
+              // pattern= "^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+              //  так чомусь помилка в консолі
+              type="text"
+              placeholder="Введіть ім'я"
+              title="Ім'я може містити лише літери, апостроф, тире та пробіли. Наприклад Адріан, Джейкоб Мерсер, Шарль де Бац де Кастельмор д'Артаньян"
+              name="name"
+              required
+            />
+          </label>
 
-            <label className={css.label}>
-              Номер телефону
-              <input
-                className={css.input}
-                type="tel"
-                placeholder="Введіть номер телефону"
-                value={сontacts.number}
-                name="number"
-                // pattern= "\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-                // i так чомусь помилка в консолі
-                title="Номер телефону має складатися з цифр і може містити пробіли, тире, круглі дужки та починатися з +"
-                required
-              />
-            </label>
-            <ButtonSbmt />
-          </form>
-        </div>
-        <img
-          className={css.imgBus}
-          width="200"
-          height={200}
-          src="https://png.pngtree.com/thumb_back/fw800/background/20220523/pngtree-hippie-bus-with-peace-and-love-label-and-flowers-image_1393563.jpg"
-          alt="bus"
-        />
-       </>
+          <label className={css.label}>
+            Номер телефону
+            <input
+              className={css.input}
+              type="tel"
+              placeholder="Введіть номер телефону"
+              value={сontacts.number}
+              name="number"
+              // pattern= "\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+              // i так чомусь помилка в консолі
+              title="Номер телефону має складатися з цифр і може містити пробіли, тире, круглі дужки та починатися з +"
+              required
+            />
+          </label>
+          <ButtonSbmt />
+        </form>
+      </div>
+           <img
+        className={css.imgBus}
+        width="200"
+        height={200}
+        src="bus.jpg"
+        alt="bus"
+      />
+    </>
   );
 };
 

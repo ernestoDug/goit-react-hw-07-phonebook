@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url(https://celes.club/uploads/posts/2022-05/1653049916_2-celes-club-p-etnicheskii-fon-krasivie-2.jpg);
+  background-image: url(fon.jpg);
 }
 
 .forms {
@@ -17,7 +17,7 @@ body {
 }
 
 .miniWrapp {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
 }
 
@@ -33,6 +33,8 @@ body {
   transform: rotate(-25deg);
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 2000ms;
   margin-left: 55px;
+  background-image: url(bus.jpg);
+  background-size: 200px;
 }
 .imgBus:hover {
   transform: rotate(10deg);
